@@ -7,12 +7,12 @@ import { fetchProducts } from '../redux/productsSlice.js';
 
 const Products = () => {
     const [colorTodo, setColorTodo] = useState("color-3");
-    const [colorRock, setColorRock] = useState("black-1");
-    const [colorAlternativo, setColorAlternativo] = useState("black-1");
-    const [colorPop, setColorPop] = useState("black-1");
-    const [colorNacional, setColorNacional] = useState("black-1");
+    const [colorPremier, setColorPremier] = useState("black-1");
+    const [colorLaLiga, setColorLaLiga] = useState("black-1");
+    const [colorSerieA, setColorSerieA] = useState("black-1");
+    const [colorPrimeraDivision, setColorPrimeraDivision] = useState("black-1");
 
-    const [filtroGenero, setFiltroGenero] = useState(null);
+    const [filtroLiga, setFiltroLiga] = useState(null);
     const [filtrados, setFiltrados] = useState([]);
     const [newProduct, setNewProduct] = useState({ query: '' });
 
@@ -25,51 +25,50 @@ const Products = () => {
 
     console.log(products)
 
-    const cambiarColor = (genero) => {
+    const cambiarColor = (liga) => {
         setColorTodo("black-1");
-        setColorRock("black-1");
-        setColorAlternativo("black-1");
-        setColorPop("black-1");
-        setColorNacional("black-1");
-        switch (genero) {
+        setColorPremier("black-1");
+        setColorLaLiga("black-1");
+        setColorSerieA("black-1");
+        setColorPrimeraDivision("black-1");
+        switch (liga) {
             case "":
                 setColorTodo("color-3");
                 break;
-            case "Rock":
-                setColorRock("color-3");
+            case "premier_league":
+                setColorPremier("color-3");
                 break;
-            case "Alternativo":
-                setColorAlternativo("color-3");
+            case "la_liga":
+                setColorLaLiga("color-3");
                 break;
-            case "Pop":
-                setColorPop("color-3");
+            case "seria_a":
+                setColorSerieA("color-3");
                 break;
-            case "Nacional":
-                setColorNacional("color-3");
+            case "primera_division":
+                setColorPrimeraDivision("color-3");
                 break;
             default:
                 break;
         }
     };
 
-    const filtrarPorGenero = (genero) => {
-        cambiarColor(genero);
-        setFiltroGenero(genero);
-        setFiltrados(products.filter(product => !genero || product.genero === genero));
+    const filtrarPorLiga = (liga) => {
+        cambiarColor(liga);
+        setFiltroLiga(liga);
+        setFiltrados(products.filter(product => !liga || product.liga === liga));
     };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setNewProduct({ [name]: value });
-        const filtrados = products.filter(product =>
-            product.title.toLowerCase().includes(value.toLowerCase()) ||
-            product.subtitle.toLowerCase().includes(value.toLowerCase())
+        let filtrados = products.filter(product =>
+            product.title.toLowerCase().includes(value.toLowerCase())
         );
         setFiltrados(filtrados);
-        setFiltroGenero(null);
+        setFiltroLiga(null);
     };
 
-    const productosMostrados = filtrados.length > 0 ? filtrados : products.filter(product => !filtroGenero || product.genero === filtroGenero);
+    const productosMostrados = filtrados.length > 0 ? filtrados : products.filter(product => !filtroLiga || product.liga === filtroLiga);
 
     return (
         <div>
@@ -85,11 +84,11 @@ const Products = () => {
                             <input type="text" name="query" placeholder="Club o año" value={newProduct.query || ''} onChange={handleChange} />
                         </div>
                         <h4 className="mt-4 mb-3 mx-0 prod-categorias-title">Filtrar por liga:</h4>
-                        <h4 className={colorRock} onClick={() => filtrarPorGenero('Rock')}>Premier League</h4>
-                        <h4 className={colorAlternativo} onClick={() => filtrarPorGenero('Alternativo')}>La Liga</h4>
-                        <h4 className={colorPop} onClick={() => filtrarPorGenero('Pop')}>Serie A</h4>
-                        <h4 className={colorNacional} onClick={() => filtrarPorGenero('Nacional')}>Primera División</h4>
-                        <h4 className={colorTodo} onClick={() => filtrarPorGenero('')}>Ver Todo</h4>
+                        <h4 className={colorPremier} onClick={() => filtrarPorLiga('premier_league')}>Premier League</h4>
+                        <h4 className={colorLaLiga} onClick={() => filtrarPorLiga('la_liga')}>La Liga</h4>
+                        <h4 className={colorSerieA} onClick={() => filtrarPorLiga('serie_a')}>Serie A</h4>
+                        <h4 className={colorPrimeraDivision} onClick={() => filtrarPorLiga('primera_division')}>Primera División</h4>
+                        <h4 className={colorTodo} onClick={() => filtrarPorLiga('')}>Ver Todo</h4>
                     </aside>
                     <section className='prod-productos'>
                         <h3>Nuestra camisetas mas vendidas:</h3>

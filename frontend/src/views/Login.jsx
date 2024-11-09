@@ -54,7 +54,7 @@ const Login = () => {
             <h3><span className="color-3 me-2">Apellido: </span>{currentUser && currentUser.lastName}</h3>
             <h3><span className="color-3 me-2">Contraseña: </span>●●●●●●●●●</h3>
             <div className="d-flex mt-5">
-                <button id="acc-button-1" className="button-account background-color-2 white-1" onClick={() => navigate('/cart')}>Ver carrito</button>
+                <button id="acc-button-1" className="button-account white-1 background-color-1" onClick={() => navigate('/cart')}>Ver carrito</button>
                 <button id="acc-button-2" className="button-account background-red-1 white-1" onClick={() => dispatch(logout())}>Cerrar sesión</button>
             </div>
         </div>
@@ -69,9 +69,9 @@ const Login = () => {
                         <h3 className="fw-bold">Iniciar Sesión</h3>
                         <input type="text" placeholder="Usuario" value={username} onChange={(e) => setUsername(e.target.value)} />
                         <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} />
-                        {forgotP && <div id="forgot-p-button" className="p-difference-button red-1">Nombre de usuario o contrasseña incorrectos</div>}
+                        {forgotP && <div id="forgot-p-button" className="p-difference-button red-1">Nombre de usuario o contraseña incorrectos</div>}
                         {!forgotP && <div id="margin-forgotP"></div>}
-                        <button className="background-color-3 white-1" onClick={handleLogin}>Iniciar Sesión</button>
+                        <button className="background-color-2 white-1" onClick={handleLogin}>Iniciar Sesión</button>
                     </div>
                     <p className="m-2 mt-5">¿No tenés cuenta?</p>
                     <button className="button-1 px-3" onClick={() => setHasAccount(false)}>Registrarse</button>
@@ -85,7 +85,7 @@ const Login = () => {
                         <input type="text" placeholder="Apellido" value={lastName} onChange={(e) => setLastName(e.target.value)} />
                         <input type="text" placeholder="Usuario" value={username} onChange={(e) => setUsername(e.target.value)} />
                         <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} />
-                        <button className="background-color-3 white-1" onClick={handleRegister}>Crear cuenta</button>
+                        <button className="background-color-2 white-1" onClick={handleRegister}>Crear cuenta</button>
                     </div>
                     <p className="m-2 mt-5">¿Ya tenés cuenta?</p>
                     <button className="button-1 px-3" onClick={() => setHasAccount(true)}>Iniciar sesión</button>

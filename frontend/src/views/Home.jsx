@@ -20,10 +20,10 @@ const Home = () => {
         <div>
             <section id="home-banner" className="d-flex justify-content-center align-items-center">
                 <div className="padding-nav"></div>
-                <h1 className="white-1 padding-nav-title cursor-default">Explora la música en vinilo</h1>
+                <h2 className="shadow-lg color-0 padding-nav-title cursor-default fw-bold ">Explora Nuestra Selección de Camisetas</h2>
             </section>
             <main id="home-novedades" className="background-color-0 d-flex flex-column justify-content-center align-items-center cursor-default">
-                <h2 className="black-1 fw-bold">Novedades</h2>
+                <h3 className="black-1 fw-bold f-56" >Novedades</h3>
                 <Carousel id="home-carousel">
                     {[...Array(2)].map((_, i) => (
                         <Carousel.Item key={i}>
@@ -40,31 +40,31 @@ const Home = () => {
                         </Carousel.Item>
                     ))}
                 </Carousel>
-                <Link to="/Products" className="button-1 black-1 mb-4 mt-3" onClick={() => window.scrollTo(0, 0)}>Ver catálogo</Link>
+                <Link to="/Products" className="button-1 color-0 mb-4 mt-3" onClick={() => window.scrollTo(0, 0)}>Ver catálogo</Link>
             </main>
-            <section id="home-quienes-somos" className="background-white-1 d-flex justify-content-center align-items-center cursor-default">
+            <section id="home-quienes-somos" className="background-color-1 d-flex justify-content-center align-items-center cursor-default">
                 <div id="home-background-1" className="w-50 h-100"></div>
-                <div className="w-50 d-flex flex-column justify-content-center align-items-center">
-                    <h2 className="black-1 fw-bold">¿Quiénes somos?</h2>
-                    <p>Desde 1967 nos dedicamos a preservar la magia atemporal de la música a través de uno de los formatos más queridos y auténticos: el vinilo. Con una pasión arraigada por el sonido analógico y la nostalgia de las portadas artísticas, ofrecemos una cuidadosa selección de álbumes que abarcan géneros, décadas y emociones.</p>
+                <div className="w-50 d-flex flex-column justify-content-center align-items-center color-0">
+                    <h3 className="fw-bold f-46">¿Quiénes somos?</h3>
+                    <p className='lora-font'>Desde nuestros inicios, nos hemos dedicado a celebrar la pasión y el legado del fútbol a través de camisetas que representan a los equipos y jugadores más emblemáticos de todos los tiempos. Creemos en el poder de una camiseta para contar historias y transmitir orgullo, ya sea en el estadio o en la vida cotidiana. Nuestra selección cuidadosamente curada abarca estilos, épocas y colores, capturando la esencia del deporte rey en cada prenda.</p>
                 </div>
             </section>
             <section id="home-contacto" className="background-color-0 d-flex flex-column justify-content-center align-items-center">
-                <h2 className="black-1 fw-bold cursor-default">Contacto</h2>
-                <div id="contacto-container" className="background-color-1 d-flex justify-content-center align-items-center p-5">
+                <h3 className="black-1 fw-bold cursor-default f-56">Contacto</h3>
+                <div id="contacto-container" className="background-color-2 d-flex justify-content-center align-items-center p-5">
                     <div className="d-flex justify-content-center align-items-center">
                         <div>
-                            <iframe id="home-map" title="i-frame" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Joaquín V. González 1125 CABA&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                            <iframe id="home-map" title="i-frame" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Nicaragua 5099 CABA&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                         </div>
                     </div>
-                    <div className="d-flex flex-column justify-content-end align-items-start ms-5 h-100 cursor-default">
-                        <p>contacto@spincity.com</p>
-                        <p>Joaquín V. González 1125 CABA</p>
-                        <p>4862-9345</p>
+                    <div className="d-flex flex-column justify-content-end align-items-start ms-5 h-100 cursor-default color-3">
+                        <p>contacto@leyys.com</p>
+                        <p>Nicaragua 5099 CABA</p>
+                        <p>4202-2401</p>
                     </div>
                 </div>
             </section>
-            <div className="footer-padding background-color-0"></div>
+            
             <Footer />
         </div>
     );

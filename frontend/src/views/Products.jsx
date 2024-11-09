@@ -75,24 +75,24 @@ const Products = () => {
         <div>
             <section id="prod-banner" className="d-flex justify-content-center align-items-center">
                 <div className="padding-nav"></div>
-                <h1 className="white-1 padding-nav-title">Productos</h1>
+                <h2 className="white-1 padding-nav-title fw-bold fs-56">Productos</h2>
             </section>
-            <main className='prod-name'>
-                <div className='prod-contenido'>
-                    <aside className="prod-categorias">
-                        <h4 className="hover-0 mx-0">Buscar productos:</h4>
+            <main className='d-flex flex-column'>
+                <div className='d-flex flex-row'>
+                    <aside className="prod-categorias mb-0 background-color-1">
+                        <h4 className="mx-0 prod-categorias-title">Buscar productos:</h4>
                         <div className='prod-busqueda d-flex align-items-center'>
-                            <input type="text" name="query" placeholder="Título o Artista" value={newProduct.query || ''} onChange={handleChange} />
+                            <input type="text" name="query" placeholder="Club o año" value={newProduct.query || ''} onChange={handleChange} />
                         </div>
-                        <h4 className="mt-4 mb-3 hover-0 mx-0">Filtrar por género:</h4>
-                        <h4 className={colorRock} onClick={() => filtrarPorGenero('Rock')}>Rock</h4>
-                        <h4 className={colorAlternativo} onClick={() => filtrarPorGenero('Alternativo')}>Alternativo</h4>
-                        <h4 className={colorPop} onClick={() => filtrarPorGenero('Pop')}>Pop</h4>
-                        <h4 className={colorNacional} onClick={() => filtrarPorGenero('Nacional')}>Nacional</h4>
+                        <h4 className="mt-4 mb-3 mx-0 prod-categorias-title">Filtrar por liga:</h4>
+                        <h4 className={colorRock} onClick={() => filtrarPorGenero('Rock')}>Premier League</h4>
+                        <h4 className={colorAlternativo} onClick={() => filtrarPorGenero('Alternativo')}>La Liga</h4>
+                        <h4 className={colorPop} onClick={() => filtrarPorGenero('Pop')}>Serie A</h4>
+                        <h4 className={colorNacional} onClick={() => filtrarPorGenero('Nacional')}>Primera División</h4>
                         <h4 className={colorTodo} onClick={() => filtrarPorGenero('')}>Ver Todo</h4>
                     </aside>
                     <section className='prod-productos'>
-                        <h3>Nuestros vinilos más escuchados:</h3>
+                        <h3>Nuestra camisetas mas vendidas:</h3>
                         <div className='prod-cards'>
                             {productosMostrados.map(product => (<Card key={product.id} product={product} isHome={false} />))}
                         </div>
@@ -100,7 +100,6 @@ const Products = () => {
                     </section>
                 </div>
             </main>
-            <div id="footer-margin"></div>
             <Footer />
         </div>
     );

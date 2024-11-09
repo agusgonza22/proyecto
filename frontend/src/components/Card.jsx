@@ -33,7 +33,7 @@ function Card({ product, isHome }) {
                 {!isHome && (
                     <div className='d-flex'>
                     <p className="card-price">$ {product.price}</p>
-                    <button id="add-cart-button" className="card-button bi bi-bag-fill mb-1" onClick={handleAddToCart}></button>
+                    {currentUser && <button id="add-cart-button" className="card-button bi bi-bag-fill mb-1" onClick={handleAddToCart}></button>}
                 </div>
                 )}
             </div>

@@ -61,7 +61,7 @@ const Cart = () => {
         if (count === 0) {
             return (
                 <div className="d-flex flex-column align-items-center pb-5">
-                    <h2 className="color-1 m-5 pb-5">No hay productos en el carrito :(</h2>
+                    <h2 className="color-1 m-5 pb-5">No hay productos en el carrito</h2>
                     <div className="p-4"></div>
                 </div>
             );
@@ -95,8 +95,7 @@ const Cart = () => {
     return (
         <div className='cart d-flex flex-column align-items-center'>
             <section id="cart-banner" className="d-flex justify-content-center align-items-center">
-                <div className="padding-nav"></div>
-                <h1 className="white-1 padding-nav-title cursor-default">Carrito</h1>
+                <h2 className="white-1 padding-nav-title cursor-default fw-bold fs-56">Carrito</h2>
             </section>
             <div className='cart-items'>
                 <div className="product-list-header d-flex align-items-center fw-bold ps-2">

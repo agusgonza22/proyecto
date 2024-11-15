@@ -66,7 +66,7 @@ const Login = () => {
                 <div id="login" className="d-flex flex-column align-items-center justify-content-center">
                     {/* <div className="padding-nav"></div> */}
                     <div id="login-form" className="background-color-1 d-flex flex-column align-items-center">
-                        <h3 className="fw-bold">Iniciar Sesión</h3>
+                        <h3 className="fw-bold white-1">Iniciar Sesión</h3>
                         <input type="text" placeholder="Usuario" value={username} onChange={(e) => setUsername(e.target.value)} />
                         <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} />
                         {forgotP && <div id="forgot-p-button" className="p-difference-button red-1">Nombre de usuario o contraseña incorrectos</div>}
@@ -80,7 +80,7 @@ const Login = () => {
                 <div id="login" className="d-flex flex-column align-items-center justify-content-center">
                 {/* <div className="padding-nav"></div> */}
                     <div id="login-form" className="background-color-1 d-flex flex-column align-items-center">
-                        <h3 className="fw-bold">Registrate</h3>
+                        <h3 className="fw-bold white-1">Registrate</h3>
                         <input type="text" placeholder="Nombre" value={name} onChange={(e) => setName(e.target.value)} />
                         <input type="text" placeholder="Apellido" value={lastName} onChange={(e) => setLastName(e.target.value)} />
                         <input type="text" placeholder="Usuario" value={username} onChange={(e) => setUsername(e.target.value)} />

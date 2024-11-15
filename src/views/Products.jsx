@@ -6,7 +6,7 @@ import Card from '../components/Card.jsx';
 import { fetchProducts } from '../redux/productsSlice.js';
 
 const Products = () => {
-    const [colorTodo, setColorTodo] = useState("color-3");
+    const [colorTodo, setColorTodo] = useState("white-1");
     const [colorPremier, setColorPremier] = useState("black-1");
     const [colorLaLiga, setColorLaLiga] = useState("black-1");
     const [colorSerieA, setColorSerieA] = useState("black-1");
@@ -31,19 +31,19 @@ const Products = () => {
         setColorPrimeraDivision("black-1");
         switch (liga) {
             case "":
-                setColorTodo("color-3");
+                setColorTodo("white-1");
                 break;
             case "premier_league":
-                setColorPremier("color-3");
+                setColorPremier("white-1");
                 break;
             case "la_liga":
-                setColorLaLiga("color-3");
+                setColorLaLiga("white-1");
                 break;
             case "serie_a":
-                setColorSerieA("color-3");
+                setColorSerieA("white-1");
                 break;
             case "primera_division":
-                setColorPrimeraDivision("color-3");
+                setColorPrimeraDivision("white-1");
                 break;
             default:
                 break;
@@ -90,7 +90,7 @@ const Products = () => {
                     </div>
 
                     <h4>Filtrar por liga:</h4>
-                    <div className="mb-3">
+                    <div className="mb-3 pointer">
                         <h4 className={colorPremier} onClick={() => filtrarPorLiga('premier_league')}>Premier League</h4>
                         <h4 className={colorLaLiga} onClick={() => filtrarPorLiga('la_liga')}>La Liga</h4>
                         <h4 className={colorSerieA} onClick={() => filtrarPorLiga('serie_a')}>Serie A</h4>

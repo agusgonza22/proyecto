@@ -20,7 +20,7 @@ const Home = () => {
         <div className='central'>
             <section id="home-banner" className="d-flex justify-content-center align-items-center">
                 {/* <div className="padding-nav"></div> */}
-                <h2 className="shadow-lg color-0 padding-nav-title cursor-default fw-bold text-center">Explora Nuestra Selección de Camisetas</h2>
+                <h2 className="shadow-lg color-0 padding-nav-title cursor-default titulo-principal fw-bold text-center">Explora Nuestra Selección de Camisetas</h2>
             </section>
             <main id="home-novedades" className="background-color-0 d-flex flex-column justify-content-center align-items-center cursor-default">
                 <h3 className="black-1 fw-bold f-56" >Novedades</h3>
@@ -44,7 +44,7 @@ const Home = () => {
                 <Link to="/Products" className="button-1 color-0 mb-4 mt-3" onClick={() => window.scrollTo(0, 0)}>Ver catálogo</Link>
             </main>
             <section  className=" container-fluid  background-color-1">
-               <div className="row">
+               <div className="row quienes-somos">
                         <div className="home-background col-12 col-sm-6">
                         </div>
                         <div className=" col-12 col-sm-6 p-4  d-flex flex-column justify-content-center align-items-center text-white">

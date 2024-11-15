@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   currentUser: null,
-  accounts: [{name: "Lucca", lastName: "Salerno", username: "lsalerno", password: "1234", isAdmin: true, cart: {}, discount: 0 }]
+  accounts: [{name: "", lastName: "", username: "", password: "", isAdmin: true, cart: {}, discount: 0 }]
 };
 
 const accountsSlice = createSlice({

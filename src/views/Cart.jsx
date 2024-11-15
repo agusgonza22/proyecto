@@ -60,14 +60,14 @@ const Cart = () => {
     const renderPago = () => {
         if (count === 0) {
             return (
-                <div className="d-flex flex-column align-items-center pb-5">
+                <div className="d-flex flex-column align-items-center pb-5 no-hay-productos">
                     <h2 className="color-1 m-5 pb-5">No hay productos en el carrito</h2>
                     <div className="p-4"></div>
                 </div>
             );
         } else {
             return(
-                <div className='cart-checkout d-flex'>
+                <div className='cart-checkout d-flex '>
                     <div className="cart-envio">
                         <h3 className="text-center pb-2 cursor-default">Tipo de envío:</h3>
                         <select value={seleccionEnvio} onChange={handleEnvioSelectChange}>
@@ -98,26 +98,26 @@ const Cart = () => {
             <section id="cart-banner" className="d-flex justify-content-center align-items-center">
                 <h2 className="white-1 padding-nav-title cursor-default fw-bold fs-56">Carrito</h2>
             </section>
-            <div className='cart-items'>
-            
-                <div className="product-list-header d-flex align-items-center fw-bold ">
+            <div className='separador'>
+                <div className='cart-items'>
                 
-                    <span id="cart-padding-titulo" className="cursor-default ">Artículo</span>
+                    <div className="product-list-header fw-bold ">
                     
-                    <span id="cart-padding-precio" className="cursor-default">Precio</span>
-                    <span id="cart-padding-precio" className="cursor-default">Cantidad</span>
-                    <span id="relleno"></span>
-                    
+                        <span id="cart-padding-titulo" className="cursor-default ">Artículo</span>
+                        
+                        <span id="cart-padding-precio" className="cursor-default">Precio</span>
+                        <span id="cart-padding-precio" className="cursor-default">Cantidad</span>
+                        <span id="relleno"></span>
+                        
+                    </div>
+                    <div className='product-list-items'>
+                        {Object.keys(currentUserWithDefault.cart).map(productId => (
+                            <ProductList key={productId} product={products[parseInt(productId) - 1]} />
+                        ))}
+                    </div>
                 </div>
-                <div className='product-list-items'>
-                    {Object.keys(currentUserWithDefault.cart).map(productId => (
-                        <ProductList key={productId} product={products[parseInt(productId) - 1]} />
-                    ))}
-                </div>
-                
-                
+                {renderPago()}
             </div>
-            {/* {renderPago()} */}
             <Footer />
         </div>
     );

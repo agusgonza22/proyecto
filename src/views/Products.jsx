@@ -76,7 +76,7 @@ const Products = () => {
             </section>
             <div className="row h-100">
             
-                <div className="col-12 col-md-4 d-flex flex-column justify-content-md-start  justify-content-center background-color-1 p-3" >
+                <div className="col-12 col-md-4 d-flex flex-column justify-content-md-start p-5  justify-content-center background-color-1 p-3" >
                     <h4>Buscar productos:</h4>
                     <div className="d-flex align-items-center mb-3">
                         <input 

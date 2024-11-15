@@ -102,6 +102,10 @@ button {
 
 .padding-nav-title { padding-top: 42.5px; }
 
+.padding-nav{
+  padding-top: 70.5px; 
+}
+
 .cursor-default { cursor: default; }
 
 .login { align-self: flex-end; }
@@ -555,7 +559,7 @@ button {
 
 #pago {
   height: 100vh;
-  width: 100vw; 
+  width: 100vw;
 }
   
 .prod-productos .card {

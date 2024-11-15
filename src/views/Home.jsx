@@ -19,7 +19,7 @@ const Home = () => {
     return (
         <div className='central'>
             <section id="home-banner" className="d-flex justify-content-center align-items-center">
-                <div className="padding-nav"></div>
+                {/* <div className="padding-nav"></div> */}
                 <h2 className="shadow-lg color-0 padding-nav-title cursor-default fw-bold text-center">Explora Nuestra Selección de Camisetas</h2>
             </section>
             <main id="home-novedades" className="background-color-0 d-flex flex-column justify-content-center align-items-center cursor-default">

@@ -15,9 +15,7 @@ const Navbar = () => {
 
     return (
         // 
-        <nav
-            className={`navbar background-color-2 navbar-expand-md navbar-light`}
-            >
+        <nav className={`navbar background-color-2 navbar-expand-md navbar-light`}>
             <div className="d-flex align-items-center">
                 <img src={logo} alt="Logo" className="navbar-brand" />
                 <h1 className="fs-28 fw-bold color-1 ms-2 titulo">Leyys</h1>
@@ -35,22 +33,22 @@ const Navbar = () => {
             
             <ul className={`nav-links d-none d-md-flex ${isMenuOpen ? "show" : ""}`}>
                 <li>
-                <Link
-                    className="color-3 fw-bold"
-                    to="/"
-                    onClick={() => window.scrollTo(0, 0)}
-                >
-                    Inicio
-                </Link>
+                    <Link
+                        className="color-3 fw-bold"
+                        to="/"
+                        onClick={() => window.scrollTo(0, 0)}
+                    >
+                        Inicio
+                    </Link>
                 </li>
                 <li>
-                <Link
-                    className="color-3 fw-bold"
-                    to="/Products"
-                    onClick={() => window.scrollTo(0, 0)}
-                >
-                    Productos
-                </Link>
+                    <Link
+                        className="color-3 fw-bold"
+                        to="/Products"
+                        onClick={() => window.scrollTo(0, 0)}
+                    >
+                        Productos
+                    </Link>
                 </li>
                 {currentUser && (
                 <li>
@@ -91,60 +89,58 @@ const Navbar = () => {
                 )}
             </div>
           
-            <div
-                className={`menu-dropdown background-color-2 d-md-none ${isMenuOpen ? "show" : ""}`}
-            >
+            <div className={`menu-dropdown background-color-2 d-md-none ${isMenuOpen ? "show" : ""}`}>
                 <ul>
-                <li className='link'>
-                    <Link
-                    className="color-3 fw-bold"
-                    to="/"
-                    onClick={() => window.scrollTo(0, 0)}
-                    >
-                    Inicio
-                    </Link>
-                </li>
-                <li className='link'>
-                    <Link
-                    className="color-3 fw-bold"
-                    to="/Products"
-                    onClick={() => window.scrollTo(0, 0)}
-                    >
-                    Productos
-                    </Link>
-                </li>
-                {currentUser && (
                     <li className='link'>
-                    <Link to="/Cart" onClick={() => window.scrollTo(0, 0)}>
-                        Carrito
-                    </Link>
+                        <Link
+                        className="color-3 fw-bold"
+                        to="/"
+                        onClick={() => window.scrollTo(0, 0)}
+                        >
+                        Inicio
+                        </Link>
                     </li>
-                )}
-                {currentUser ? (
-                <div className='usuario-dropdown'>
-                    <Link
-                    to="/Login"
-                    onClick={() => window.scrollTo(0, 0)}
-                    >
-                    <i className="bi bi-person-circle pe-2"></i>
-                    {currentUser.name}
-                    </Link>
-                    <Link to="/Cart" className="nav-cart color-3">
-                        <i className="bi bi-cart-fill px-1"></i>
-                        <div id="nav-count">{count}</div>
-                    </Link>
-                </div>
-                ) : (
-                <div>
-                    <Link
-                    to="/Login"
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="color-3 fw-bold"
-                    >
-                    Iniciar sesión
-                    </Link>
-                </div>
-                )}
+                    <li className='link'>
+                        <Link
+                        className="color-3 fw-bold"
+                        to="/Products"
+                        onClick={() => window.scrollTo(0, 0)}
+                        >
+                        Productos
+                        </Link>
+                    </li>
+                    {currentUser && (
+                        <li className='link'>
+                        <Link to="/Cart" onClick={() => window.scrollTo(0, 0)}>
+                            Carrito
+                        </Link>
+                        </li>
+                    )}
+                    {currentUser ? (
+                    <div className='usuario-dropdown'>
+                        <Link
+                        to="/Login"
+                        onClick={() => window.scrollTo(0, 0)}
+                        >
+                        <i className="bi bi-person-circle pe-2"></i>
+                        {currentUser.name}
+                        </Link>
+                        <Link to="/Cart" className="nav-cart color-3">
+                            <i className="bi bi-cart-fill px-1"></i>
+                            <div id="nav-count">{count}</div>
+                        </Link>
+                    </div>
+                    ) : (
+                    <div>
+                        <Link
+                        to="/Login"
+                        onClick={() => window.scrollTo(0, 0)}
+                        className="color-3 fw-bold"
+                        >
+                        Iniciar sesión
+                        </Link>
+                    </div>
+                    )}
                 
                 </ul>
             </div>

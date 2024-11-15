@@ -64,7 +64,7 @@ const Login = () => {
         <>
             {hasAccount ? (
                 <div id="login" className="d-flex flex-column align-items-center justify-content-center">
-                    <div className="padding-nav"></div>
+                    {/* <div className="padding-nav"></div> */}
                     <div id="login-form" className="background-color-1 d-flex flex-column align-items-center">
                         <h3 className="fw-bold">Iniciar Sesión</h3>
                         <input type="text" placeholder="Usuario" value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -78,7 +78,7 @@ const Login = () => {
                 </div>
             ) : (
                 <div id="login" className="d-flex flex-column align-items-center justify-content-center">
-                <div className="padding-nav"></div>
+                {/* <div className="padding-nav"></div> */}
                     <div id="login-form" className="background-color-1 d-flex flex-column align-items-center">
                         <h3 className="fw-bold">Registrate</h3>
                         <input type="text" placeholder="Nombre" value={name} onChange={(e) => setName(e.target.value)} />

@@ -19,16 +19,15 @@
   height: 0 !important; 
 }
 
-html{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body { font-family: 'Poppins';
   overflow-x: hidden;
   width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 /* body h1 { font-size: 100px; } */
@@ -357,33 +356,37 @@ button {
 
 #home-novedades .card-subtitle { margin-bottom: 30px; }
 
+.contacto{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  
 
-
-
-#home-contacto {
-  height: 100%;
-  width: 100%; 
 }
 
-#home-contacto h2 { margin-bottom: 40px; }
+@media  (min-width:768px) {
 
-#home-contacto p {
-  font-weight: bold;
-  margin: 0;
-  font-size: 24px; 
+  .contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+  }
+  
 }
 
-#contacto-container { width: 100%; height: auto; }
+@media  (min-width:768px) {
 
-.home-background {
-  background-image: url("../img/image_quienes_somos.webp");
-  background-size: cover; 
-  background-position: center;
-  height: 400px; 
+  .contacto-datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    justify-items: end;
+    align-items: end;
+  }
+  
 }
-
-
-/* ----------------------------------------------------- */
 
 .map-container {
   position: relative;
@@ -417,18 +420,48 @@ button {
     height: 50vh; 
     padding-bottom: 0; 
   }
-  
-
-  #home-contacto .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
- 
 }
 
-/* ----------------------------------------- */
+
+
+
+#home-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-contacto h2 { margin-bottom: 40px; }
+
+#home-contacto p {
+  font-weight: bold;
+  margin: 0;
+  font-size: 24px; 
+}
+
+#contacto-container { width: 100%; height: auto; }
+
+
+.home-background{
+  background-image: url("../img/image_quienes_somos.webp");
+  background-size: cover; 
+  background-position: center;
+  /* height: 400px; */
+}
+
+
+@media  (min-width:768px) {
+
+  .home-background{
+    background-image: url("../img/image_quienes_somos.webp");
+    background-size: cover; 
+    background-position: center;
+    /* height: 400px; */
+  }
+  
+}
+
 .home-container-cards {
   padding: 60px;
   display: inline-flex;
@@ -519,73 +552,6 @@ button {
   background-color: #b33737 !important;
   transition: 0.3s ease; 
 }
-
-nav {
-  position: fixed;
-  top: 0;
-  margin: 0;
-  left: 0;
-  z-index: 100;
-  transition: 0.3s ease;
-  width: 100%;
- 
-  font-size: 25px;
-  padding: 0 20px;
-  justify-content: space-between; 
-}
-
-nav img { 
-  height: 90px;
-}
-
-.nav-cart{
-  display: flex;
-  text-decoration: none;
-  transition: 0.3s ease;
-  color: #CCCCCC;
-}
-
-.nav-cart:hover {
-  color: #40AF84;
-  transition: 0.3s ease; 
-}
-
-.nav-cart img{
-  width: 50px;
-  height: auto;
-  margin-right: 0px;
-  margin-left: 20px; 
-}
-
-.nav-login{ margin-right: 0px; }
-
-.nav-links {
-  margin: auto;
-  list-style-type: none; 
-  justify-content: center; 
-}
-
-.nav-links li {
-  margin-right: 25px;
-  transition: 0.5s ease; 
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #CCCCCC;
-  transition: 0.5s ease; 
-}
-
-.nav-links a:hover {
-  color: #40AF84;
-  transition: 0.5s ease; 
-}
-
-#nav-count { width: 20px; }
-
-
-
-#nav-acc-div { width: 30% }
 
 #pago {
   height: 100vh;
@@ -717,14 +683,120 @@ nav img {
   transition: 0.2s ease; 
 }
 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  margin: 0;
+  width: 100%;
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+nav img {
+  height: 90px;
+}
+
+.titulo {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  font-weight: 800;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #CCCCCC;
+  transition: 0.5s ease;
+}
+
+.nav-links a:hover {
+  color: #40AF84;
+  transition: 0.5s ease;
+}
 
 
+.navbar-toggler {
+  display: block;
+}
 
-
-@media  (min-width:768px) {
-
-  #home-quienes-somos{
-    flex-direction: column;
+@media (min-width: 768px) {
+  .navbar-toggler {
+    display: none;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+.menu-dropdown {
+  display: none;
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.link{
+  text-decoration: none;
+  list-style: none;
+}
+
+.menu-dropdown.show {
+  display: flex;
+}
+
+.nav-cart{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  align-items: center;
+}
+
+.usuario-dropdown{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.nav-derecha {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.menu-dropdown a {
+  text-decoration: none;
+  color: #CCCCCC;
+  font-weight: 800;
+  padding: 5px 0;
+  transition: 0.3s ease;
+}
+
+.menu-dropdown a:hover {
+  color: #40AF84;
 }

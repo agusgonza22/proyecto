@@ -17,7 +17,7 @@ const Home = () => {
     }, [dispatch]);
 
     return (
-        <div>
+        <div className='central'>
             <section id="home-banner" className="d-flex justify-content-center align-items-center">
                 <div className="padding-nav"></div>
                 <h2 className="shadow-lg color-0 padding-nav-title cursor-default fw-bold text-center">Explora Nuestra Selección de Camisetas</h2>
@@ -46,10 +46,9 @@ const Home = () => {
             <section  className=" container-fluid  background-color-1">
                <div className="row">
                         <div className="home-background col-12 col-sm-6">
-                            
                         </div>
-                        <div className=" col-12 col-sm-6  d-flex flex-column justify-content-center align-items-center text-white">
-                            <h3 className="fw-bold f-46">¿Quiénes somos?</h3>
+                        <div className=" col-12 col-sm-6 p-4  d-flex flex-column justify-content-center align-items-center text-white">
+                            <h3 className="fw-bold f-46 text-center">¿Quiénes somos?</h3>
                             <p className="lora-font text-center">
                                 Desde nuestros inicios, nos hemos dedicado a celebrar la pasión y el legado del fútbol a través de camisetas que representan a los equipos y jugadores más emblemáticos de todos los tiempos. Creemos en el poder de una camiseta para contar historias y transmitir orgullo, ya sea en el estadio o en la vida cotidiana. Nuestra selección cuidadosamente curada abarca estilos, épocas y colores, capturando la esencia del deporte rey en cada prenda.
                             </p>
@@ -58,16 +57,16 @@ const Home = () => {
             </section>
             <section id="home-contacto" className="background-color-0 mt-5 mb-5">
                 <h3 className="black-1 fw-bold cursor-default f-56 text-center">Contacto</h3>
-                <div className="row background-color-2 p-4 ">
-                    <div className="col-12 col-md-6 map-container flex-grow-1">
-                    <iframe
-                        id="home-map"
-                        title="i-frame"
-                        src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Nicaragua%205099%20CABA&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                      
-                    ></iframe>
+                <div className="contacto background-color-2 p-4 ">
+                    <div className="map-container">
+                        <iframe
+                            id="home-map"
+                            title="i-frame"
+                            src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Nicaragua%205099%20CABA&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                        
+                        ></iframe>
                     </div>
-                    <div className="col-12 col-md-6 d-flex flex-grow-1 flex-column justify-content-center align-items-center  cursor-default color-3">
+                    <div className="contacto-datos color-3">
                     <p>contacto@leyys.com</p>
                     <p>Nicaragua 5099 CABA</p>
                     <p>4202-2401</p>

@@ -15,13 +15,11 @@ const Navbar = () => {
 
     return (
         <nav className="navbar navbar-expand-md navbar-light background-color-2">
-            {/* Logo y título */}
             <div id="nav-logo-div" className="d-flex align-items-center">
                 <img src={logo} alt="Logo" className="navbar-brand" />
                 <h1 className='fs-28 fw-bold color-1 ms-2'>Leyys</h1>
             </div>
 
-            {/* Botón de toggle para móvil */}
             <button 
                 className="navbar-toggler" 
                 type="button" 
@@ -31,14 +29,13 @@ const Navbar = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
 
-            {/* Menú de navegación en desktop y mobile */}
             <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
                 <ul className="navbar-nav ms-auto text-center"> {/* Asegúrate de usar text-center aquí */}
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/" onClick={() => window.scrollTo(0, 0)}>Inicio</Link>
+                    <li className="nav-item ">
+                        <Link className="nav-link color-3 fw-bold" to="/" onClick={() => window.scrollTo(0, 0)}>Inicio</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/Products" onClick={() => window.scrollTo(0, 0)}>Productos</Link>
+                    <li className="nav-item ">
+                        <Link className="nav-link color-3 fw-bold" to="/Products" onClick={() => window.scrollTo(0, 0)}>Productos</Link>
                     </li>
                     {currentUser && (
                         <li className="nav-item">
@@ -54,11 +51,10 @@ const Navbar = () => {
                         </li>
                     ) : (
                         <li className="nav-item">
-                            <Link to='/Login' onClick={() => window.scrollTo(0, 0)} className="nav-link">Iniciar sesión</Link>
+                            <Link to='/Login' onClick={() => window.scrollTo(0, 0)} className="nav-link color-3 fw-bold">Iniciar sesión</Link>
                         </li>
                     )}
                 </ul>
-                {/* Icono de carrito con la cantidad de productos */}
                 {currentUser && (
                     <Link to="/Cart" className="nav-cart black-1">
                         <i className="bi bi-cart-fill px-1"></i>

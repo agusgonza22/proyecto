@@ -93,25 +93,31 @@ const Cart = () => {
     }
 
     return (
-        <div className='cart d-flex flex-column align-items-center'>
+        <div className='d-flex flex-column align-items-center'>
+            <div className='padding-nav-title'></div>
             <section id="cart-banner" className="d-flex justify-content-center align-items-center">
                 <h2 className="white-1 padding-nav-title cursor-default fw-bold fs-56">Carrito</h2>
             </section>
             <div className='cart-items'>
-                <div className="product-list-header d-flex align-items-center fw-bold ps-2">
-                    <span id="cart-padding-titulo" className="cursor-default ps-2">Artículo</span>
-                    <span></span>
+            
+                <div className="product-list-header d-flex align-items-center fw-bold ">
+                
+                    <span id="cart-padding-titulo" className="cursor-default ">Artículo</span>
+                    
                     <span id="cart-padding-precio" className="cursor-default">Precio</span>
                     <span id="cart-padding-precio" className="cursor-default">Cantidad</span>
-                    <span></span>
+                    <span id="relleno"></span>
+                    
                 </div>
-                <div>
+                <div className='product-list-items'>
                     {Object.keys(currentUserWithDefault.cart).map(productId => (
                         <ProductList key={productId} product={products[parseInt(productId) - 1]} />
                     ))}
                 </div>
+                
+                
             </div>
-            {renderPago()}
+            {/* {renderPago()} */}
             <Footer />
         </div>
     );

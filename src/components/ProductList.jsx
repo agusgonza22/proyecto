@@ -28,21 +28,26 @@ function ProductList({ product }) {
   };
 
   return (
-    <div className="product-list d-flex align-items-center justify-content-between background-gray w-100">
-      <div className="d-flex align-items-center">
-        <img src={imageMap[product.image]} alt="cover" />
-        <div className="d-flex flex-column justify-content-center">
-          <h4 className="product-column-1 my-0">{product.title}</h4>
-          <h5 className="product-column-1 my-0">{product.subtitle}</h5>
+    <div className="product-list d-flex align-items-center background-gray">
+      
+      <div className="first-col">
+        <img src={imageMap[product.image]} alt={"remera de " + product.name } />
+        <div className='inner-first-col'>
+          <h4>{product.title}</h4>
+          <h5>{product.subtitle}</h5>
         </div>
-        <p className="product-column-2 my-0">$ {product.price}</p>
-        <div className="d-flex align-items-center justify-content-center product-column-3">
+      </div>
+      <p className="second-col">$ {product.price}</p>
+      <div className="second-col">
+        <div className='inner-second-col'>
           <button className="product-less-more-button color-2" onClick={handleLessQuantity}>-</button>
-          <p className="my-0 mx-2">{quantity}</p>
+          <p className='m-0'>{quantity}</p>
           <button className="product-less-more-button color-2" onClick={handleMoreQuantity}>+</button>
         </div>
       </div>
-      <button id="user-delete-button" className="background-red-1 d-flex align-items-center justify-content-center m-2 px-3" onClick={() => dispatch(removeItemFromCart(product.id))}>Eliminar</button>
+      <div className=''>
+        <button id="user-delete-button" className="background-red-1 d-flex align-items-center justify-content-center m-2 px-3" onClick={() => dispatch(removeItemFromCart(product.id))}>Eliminar</button>
+      </div>
     </div>
   );
 }

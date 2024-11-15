@@ -71,7 +71,7 @@ const Products = () => {
     return (
         <div>
             <section id="prod-banner" className="d-flex justify-content-center align-items-center">
-                {/* <div className="padding-nav"></div> */}
+              
                 <h2 className="white-1 padding-nav-title fw-bold fs-56">Productos</h2>
             </section>
             <div className="row h-100">

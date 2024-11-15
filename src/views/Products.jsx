@@ -74,44 +74,44 @@ const Products = () => {
                 <div className="padding-nav"></div>
                 <h2 className="white-1 padding-nav-title fw-bold fs-56">Productos</h2>
             </section>
-            <main className="d-flex flex-column">
-                <div className="row">
-                    {/* Sidebar de filtros */}
-                    <aside className="col-12 col-md-3 mb-4 mb-md-0">
-                        <div className="prod-categorias background-color-1">
-                            <h4 className="mx-0 prod-categorias-title">Buscar productos:</h4>
-                            <div className="prod-busqueda d-flex align-items-center">
-                                <input 
-                                    type="text" 
-                                    name="query" 
-                                    placeholder="Club o año" 
-                                    value={newProduct.query || ''} 
-                                    onChange={handleChange} 
-                                    className="form-control"
-                                />
-                            </div>
-                            <h4 className="mt-4 mb-3 mx-0 prod-categorias-title">Filtrar por liga:</h4>
-                            <h4 className={colorPremier} onClick={() => filtrarPorLiga('premier_league')}>Premier League</h4>
-                            <h4 className={colorLaLiga} onClick={() => filtrarPorLiga('la_liga')}>La Liga</h4>
-                            <h4 className={colorSerieA} onClick={() => filtrarPorLiga('serie_a')}>Serie A</h4>
-                            <h4 className={colorPrimeraDivision} onClick={() => filtrarPorLiga('primera_division')}>Primera División</h4>
-                            <h4 className={colorTodo} onClick={() => filtrarPorLiga('')}>Ver Todo</h4>
-                        </div>
-                    </aside>
+            <div className="row h-100">
+            
+                <div className="col-12 col-md-4 d-flex flex-column justify-content-md-start  justify-content-center background-color-1 p-3" >
+                    <h4>Buscar productos:</h4>
+                    <div className="d-flex align-items-center mb-3">
+                        <input 
+                            type="text" 
+                            name="query" 
+                            placeholder="Club o año" 
+                            value={newProduct.query || ''} 
+                            onChange={handleChange} 
+                            className="form-control" 
+                        />
+                    </div>
 
-                    {/* Productos */}
-                    <section className="col-12 col-md-9">
-                        <h3>Nuestras camisetas más vendidas:</h3>
-                        <div className="row">
-                            {productosMostrados.map(product => (
-                                <div key={product.id} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                                    <Card product={product} isHome={false} />
-                                </div>
-                            ))}
-                        </div>
-                    </section>
+                    <h4>Filtrar por liga:</h4>
+                    <div className="mb-3">
+                        <h4 className={colorPremier} onClick={() => filtrarPorLiga('premier_league')}>Premier League</h4>
+                        <h4 className={colorLaLiga} onClick={() => filtrarPorLiga('la_liga')}>La Liga</h4>
+                        <h4 className={colorSerieA} onClick={() => filtrarPorLiga('serie_a')}>Serie A</h4>
+                        <h4 className={colorPrimeraDivision} onClick={() => filtrarPorLiga('primera_division')}>Primera División</h4>
+                        <h4 className={colorTodo} onClick={() => filtrarPorLiga('')}>Ver Todo</h4>
+                    </div>
                 </div>
-            </main>
+
+
+               
+                <div className="col-12 col-md-8 h-100 p-3">
+                    <h3 className="text-center">Nuestras camisetas más vendidas:</h3>
+                    <div className="d-flex flex-wrap justify-content-center gap-3">
+                        {productosMostrados.map(product => (
+                            <div key={product.id} className="d-flex justify-content-center align-items-center">
+                                <Card product={product} isHome={false} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
             <Footer />
         </div>
     );

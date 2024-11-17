@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 import Footer from '../components/Footer.jsx';
@@ -6,6 +7,8 @@ import Card from '../components/Card.jsx';
 import { fetchProducts } from '../redux/productsSlice.js';
 
 const Products = () => {
+
+    const currentUser = useSelector(state => state.accounts.currentUser);
     const [colorTodo, setColorTodo] = useState("white-1");
     const [colorPremier, setColorPremier] = useState("black-1");
     const [colorLaLiga, setColorLaLiga] = useState("black-1");
@@ -101,8 +104,9 @@ const Products = () => {
 
 
                
-                <div className="col-12 col-md-8 h-100 p-3">
-                    <h3 className="text-center">Nuestras camisetas más vendidas:</h3>
+                <div className="col-12 col-md-8 h-100 p-3 articulos">
+                    <h3 className="text-center ">Nuestras camisetas más vendidas:</h3>
+                    {!currentUser && <span className="text-center leyenda color-3">Debes iniciar sesión para poder comprar artículos.</span>}
                     <div className="d-flex flex-wrap justify-content-center gap-3">
                         {productosMostrados.map(product => (
                             <div key={product.id} className="d-flex justify-content-center align-items-center">

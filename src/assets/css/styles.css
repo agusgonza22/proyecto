@@ -682,7 +682,24 @@ nav img {
 }
 
 
+.leyenda{
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
 
+}
+
+.articulos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:10px;
+}
+
+.articulos h3 {
+  margin: 0;
+
+}
 
 
 

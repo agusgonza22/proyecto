@@ -248,58 +248,10 @@ button {
   flex-direction: column;
   gap: 30px;
   width: 100%;
-  
-
 }
 
 .quienes-somos{
   min-height: 60vh;
-}
-
-@media  (min-width:768px) {
-
-  .contacto{
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-between; */
-    width: 80%;
-  }
-  
-}
-
-@media  (min-width:1500px) {
-
-  .contacto{
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-between; */
-    width: 60%;
-  }
-  
-}
-
-@media  (min-width:768px) {
-
-  .contacto-datos{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    justify-items: end;
-    align-items: start;
-    /* width: 25%; */
-    flex-grow: 0;
-  }
-
-  .map-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; 
-    height: 0;
-    overflow: hidden;
-    /* max-width: 75%; */
-    flex-grow: 1;
-  }
-  
 }
 
 .map-container {
@@ -317,21 +269,6 @@ button {
   left: 0 ;
   width: 100%;
   height: 100%;
-}
-
-@media (max-width: 768px) {
-  .map-container {
-    height: 50vh;  
-    padding-bottom: 0; 
-  }
-}
-
-@media (min-width: 768px) {
-  .map-container {
-    width: 50%; 
-    height: 50vh; 
-    padding-bottom: 0; 
-  }
 }
 
 #home-contacto {
@@ -356,17 +293,6 @@ button {
   background-size: cover; 
   background-position: center;
   /* height: 400px; */
-}
-
-@media  (min-width:768px) {
-
-  .home-background{
-    background-image: url("../img/image_quienes_somos.webp");
-    background-size: cover; 
-    background-position: center;
-    /* height: 400px; */
-  }
-  
 }
 
 .home-container-cards {
@@ -471,7 +397,7 @@ button {
 #prod-banner {
   background-image: url("../img/banner_productos.webp");
   height: 450px;
-  width: 100%;
+  width: 100 dvw;
   background-size: cover;
   background-position: center; 
 }
@@ -595,21 +521,8 @@ nav img {
   transition: 0.5s ease;
 }
 
-
 .navbar-toggler {
   display: block;
-}
-
-@media (min-width: 768px) {
-  .navbar-toggler {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
 }
 
 .menu-dropdown {
@@ -930,6 +843,59 @@ nav img {
   font-size: 27px;
 }
 
+@media (min-width: 768px) {
+  .navbar-toggler {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .home-background{
+    background-image: url("../img/image_quienes_somos.webp");
+    background-size: cover; 
+    background-position: center;
+  }
+
+  .map-container {
+    height: 50vh;  
+    padding-bottom: 0; 
+  }
+
+  .map-container {
+    width: 50%; 
+    height: 50vh; 
+    padding-bottom: 0; 
+  }
+
+  .contacto-datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    justify-items: end;
+    align-items: start;
+    flex-grow: 0;
+  }
+
+  .map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    flex-grow: 1;
+  }
+
+  .contacto{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    width: 80%;
+  }
+}
+
+
 @media  (min-width:1000px) {
 
   .no-hay-productos h2{
@@ -1064,3 +1030,15 @@ nav img {
     font-size: 56px;
    }
 }
+
+@media  (min-width:1500px) {
+
+  .contacto{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    width: 60%;
+  }
+  
+}
+

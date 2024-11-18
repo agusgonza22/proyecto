@@ -27,13 +27,13 @@ const Footer = () => {
 
       
         <div className="col-12 col-md-3 d-flex justify-content-center mb-3 mb-md-0">
-          <a href="#" className="mx-2">
+          <a href="https://www.instagram.com/" className="mx-2">
             <i className="bi bi-instagram color-3"></i>
           </a>
-          <a href="#" className="mx-2">
+          <a href="https://x.com/" className="mx-2">
             <i className="bi bi-twitter-x color-3"></i>
           </a>
-          <a href="#" className="mx-2">
+          <a href="https://www.tiktok.com/es/" className="mx-2">
             <i className="bi bi-tiktok color-3"></i>
           </a>
         </div>
